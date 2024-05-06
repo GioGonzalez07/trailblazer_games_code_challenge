@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Coding Challenge Description: URL Query Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
 
-## Available Scripts
+Develop a React component in TypeScript named URLQueryComponent that allows a user to input a URL and then attempt to fetch data from that URL to determine whether it can be accessed successfully or results in an error. The URL check can support different HTTP methods.
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+- **User Input Form**: Implement a form where the user can type or paste a URL.
+- **Query Button**: Include a button to initiate the fetch operation.
+- **Display Results**: Show a message indicating whether the fetch was successful or resulted in an error.
+- **Styling**: Apply basic styling to make the UI user-friendly and presentable.
+- **Clean Code**: Write clear and maintainable code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technical Details
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You may use any library you use, but please justify in a README why you are using it.
 
-### `npm test`
+## Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The challenge must not take more than 45 mins.
+- Please submit your code in a GitHub repository. Once completed, please send me an email.
+- Please write in a README any assumptions on the code that you took.
+- Please write in a README any changes or additions you would make to the code.
 
-### `npm run build`
+### Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To begin working on this project, follow these simple steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Install Dependencies:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   yarn install
+   ```
 
-### `npm run eject`
+2. **Start the Development Server:**
+   ```bash
+   yarn start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Further Tasks to Improve the Project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Check if the content is HTML or JSON.
+- Create a new component to display the results from the fetch. (JSON result per example).
+- When POST or PUT methods are chosen, show inputs to be filled and form the object to be sent with the request.
+- Solve CORS policy error by building a proxy - we can use express to build its proxy. With this, we can create a middleware to pass a header with 'Access-Control-Allow-Origin', '*' to every response from the server.
+- Add a lint configuration that will enforce consistent coding standards, catch syntax errors early in the development process, and help identify potential bugs, improving code quality and maintainability.
+- Make layout responsible for all sizes of device (easier to do with React Bootstrap Breakpoints)
+- Create a folder and files to store the inline styles.
+- Add tests to check:
+  - Valid URL Fetch: Verify that the component correctly fetches data from the URL.
+  - Invalid URL Fetch: Verify that when the component has an error when fetching data from the URL to display a message.
+  - Different HTTP Methods Handling: Verify that the component can handle various request types appropriately.
+  - Edge Cases Testing: Test edge cases such as extremely long URLs, URLs with special characters, or URLs with query parameters.
+- Fix: WARNING in ./node_modules/@react-aria/ssr/dist/SSRProvider.mjs
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Libraries Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **React Bootstrap**: I chose to work with Bootstrap because it is the most popular CSS framework that provides pre-styled components and allows me to create components quickly and in the future making easier to make the styles responsive.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **react-icons**: This library provides free icons that make the application a bit more pleasant for the user. I used some icons to be displayed with the response message.
